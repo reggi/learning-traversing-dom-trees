@@ -1,33 +1,17 @@
-# ESNext Boilerplate
+# Traversing DOM Trees
 
-```bash
-# clone this repo
-git clone https://github.com/reggi/esnext-boilerplate.git
-# cd into the downloaded repo
-cd esnext-boilerplate
-# install babel (locally)
-npm install
-# use this to watch the src dir
-npm run babel-node-watch
-# or just run babel with
-npm run babel-node
+The challenge here is to find given two DOM trees `rootA` and `rootB` and one node that resides in `rootA`, node `n`, get the value of the corresponding node in `rootB`, `findInClone(n) --> m`.
+
+Here's a simple illustration:
+
+```
+  rootA      rootB
+   / \       / \
+  O   O     O   O
+     /|\       /|\
+    O n O     O m O
+
+  original   clone
 ```
 
-# Async / Await
-
-Below is an example using `async` and `await`. You have to make sure the dependency `"babel-polyfill"` is included.
-
-```js
-import "babel-polyfill"
-
-async function five() {
-  return 5
-}
-
-async function helloWorld() {
-  var numb = await five()
-  console.log(numb)
-}
-
-helloWorld() // logs `5`
-```
+I've provided two HTML documents `star-wars.html` and `star-trek.html`, both have the same amount of DOM nodes. I'm using `async / await` to perform async operations, for reading the file system and creating a mock DOM using `jsdom`.
