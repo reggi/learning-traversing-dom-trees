@@ -3,6 +3,7 @@
   "main": "src/index.js",
   "esnext": "lib/index.js",
   "scripts": {
+    "start": "babel-node ./src/index.js",
     "babel-node": "babel ./src --out-dir ./lib",
     "babel-node-watch": "babel ./src --out-dir ./lib --watch",
     "babel-broswerify": "browserify ./src/index.js -o ./lib/index.js -t [ babelify ]",

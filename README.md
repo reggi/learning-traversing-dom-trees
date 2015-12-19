@@ -15,3 +15,5 @@ Here's a simple illustration:
 ```
 
 I've provided two HTML documents `star-wars.html` and `star-trek.html`, both have the same amount of DOM nodes. I'm using `async / await` to perform async operations, for reading the file system and creating a mock DOM using `jsdom`.
+
+To run use `npm start` to run the code, make sure you've run `npm install`. Nothing should happen because the assertions don't fail.
